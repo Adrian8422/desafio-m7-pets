@@ -1,0 +1,28 @@
+{
+  "name": "resolucion-auth-cap-4",
+  "version": "1.0.0",
+  "license": "MIT",
+  "scripts": {
+    "dev:be": "nodemon --watch ./be-src/index.ts --exec ts-node ./be-src/index.ts",
+    "build:be": "tsc",
+    "build:fe": "parcel build ./fe-src/index.html",
+    "start": "node ./be-dist/be-src/index.js",
+    "build": "npm run build:be && npm run build:fe",
+    "dev": "npm run dev:be",
+    "sync": "ts-node ./be-src/sync.ts "
+  },
+  "dependencies": {
+    "@types/express": "^4.17.13",
+    "@vaadin/router": "^1.7.4",
+    "body-parser": "^1.20.0",
+    "cloudinary": "^1.29.0",
+    "express": "^4.17.3",
+    "jsonwebtoken": "^8.5.1",
+    "nodemon": "^2.0.15",
+    "parcel": "^2.4.1",
+    "pg": "^8.7.3",
+    "pg-hstore": "^2.3.4",
+    "sequelize": "^6.17.0"
+  },
+  "main": "index.js"
+}
