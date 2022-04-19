@@ -1,4 +1,4 @@
-import { sequelize } from "./models/connectioN";
+import { sequelize } from "./models/connection";
 import { User } from "./models/user";
 
 User.sequelize.sync({ force: true });
