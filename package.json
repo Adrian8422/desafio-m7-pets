@@ -8,7 +8,7 @@
     "build:front": "parcel build ./front-src/index.html",
     "build:back": "tsc",
     "dev": "npm run dev:be",
-    "build": "yarn build:back && yarn build:front",
+    "build": "npm run build:back && npm run build:front",
     "start": "node ./back-dist/index.js"
   },
   "dependencies": {
