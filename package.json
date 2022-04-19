@@ -3,12 +3,11 @@
   "version": "1.0.0",
   "license": "MIT",
   "scripts": {
-    "dev:be": "nodemon --watch ./back-src/index.ts --exec ts-node ./back-src/index.ts",
     "sync": "ts-node ./back-src/sync.ts",
+    "dev": "nodemon --watch ./back-src/index.ts --exec ts-node ./back-src/index.ts",
     "build:front": "parcel build ./front-src/index.html",
     "build:back": "tsc",
-    "dev": "npm run dev:be",
-    "build": "npm run build:back && npm run build:front",
+    "build": "yarn build:back && yarn build:front",
     "start": "node ./back-dist/index.js"
   },
   "dependencies": {
