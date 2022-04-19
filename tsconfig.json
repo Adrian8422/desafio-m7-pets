@@ -4,8 +4,9 @@
     "module": "CommonJS",
     "moduleResolution": "node",
     "resolveJsonModule": true,
-    "outDir": "be-dist"
+    "outDir": "back-dist"
   },
 
-  "includes": ["./be-src/**/*.ts"]
+  "includes": ["back-src"],
+  "exclude": ["front-src"]
 }
