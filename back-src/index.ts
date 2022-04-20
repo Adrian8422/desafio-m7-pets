@@ -15,7 +15,7 @@ app.use(
 app.use(cors());
 app.get("/env", (req, res) => {
   res.json({
-    message: "todo ok",
+    message: process.env.NODE_ENV,
   });
 });
 
