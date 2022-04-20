@@ -1,3 +1,5 @@
+import { Router } from "@vaadin/router";
+
 class Twopage extends HTMLElement {
   connectedCallback() {
     this.render();
@@ -26,30 +28,27 @@ class Twopage extends HTMLElement {
       `;
     this.appendChild(style);
   }
+  addlisteners() {
+    const button = this.querySelector(".button-prueba");
+    button.addEventListener("click", () => {
+      Router.go("otra-pagina");
+    });
+  }
   render() {
     const div = document.createElement("div");
     div.innerHTML = `
-      <div class="container-page">
-          <div class="container-title">
-              <h1 class="title">Piedra, 
-              papel ó 
-              tijera</h1>
-          </div>
-       <p class="text">Ups, esta sala está completa y tu nombre no coincide con nadie en la sala.</p>
+    
 
 
        <h1>Cambio de pagina</h1>
+       <button class="button-prueba">Prueba</button>
        
       
-         <div class="container-hands">       
-           <hands-el jugada="piedra"></hands-el>
-           <hands-el jugada="papel"></hands-el>
-           <hands-el jugada="tijera"></hands-el>
-         </div>
-      </div> 
+     
       `;
 
     this.appendChild(div);
+    this.addlisteners();
   }
 }
 customElements.define("two-page", Twopage);
